@@ -4,12 +4,17 @@
   "name": "CSV for Trello",
   "description": "CSV export for trello board",
   "version": "0.1",
+  "browser_action": {
+    "default_title": "CSV for trello export"
+  },
 
-  "content_scripts": [
-    {
-      "matches": ["https://trello.com/*"],
-      "js": ["csv.js"]
-    }
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "activeTab"
   ]
 
 }
