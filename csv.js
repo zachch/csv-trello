@@ -3,13 +3,11 @@
 
   function getBoardID(){
     var pathname = window.location.pathname;
-    var regex = /\/b\/(\w*)(\/*)/;
-    var boardID = regex.exec(pathname);
+    var boardID = /\/b\/(\w*)(\/*)/.exec(pathname);
     if(!boardID){
       alert('Not a Trello board!');
-      return;
+      throw 'Cannot detect Trello board';
     }
     return boardID[1];
   }
-
 })();
