@@ -1,6 +1,4 @@
-# csv-trello
-
-## CSV for Trello
+# CSV for Trello
 A Chrome extension to export data via a CSV file from a Trello board.
 
 ## Install it here
