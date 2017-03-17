@@ -1,13 +1,14 @@
 (function (){
   "use strict";
 
-  function getBoardID(){
-    var pathname = window.location.pathname;
-    var boardID = /\/b\/(\w*)(\/*)/.exec(pathname);
-    if(!boardID){
-      alert('Not a Trello board!');
-      throw 'Cannot detect Trello board';
-    }
-    return boardID[1];
-  }
+  // set up data
+  var cardArray = trelloHelper.cardToArray();
+
+  // set up CSV file
+  var trelloData = trelloHelper.data();
+  var csvHeaders = trelloHelper.getCSVHeaders(trelloData.cardData[0]);
+  var csvContent = utils.getCSVContent(cardArray, csvHeaders);
+  utils.downloadCSVFile(csvContent, 'trello');
+
+
 })();
