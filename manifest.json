@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "CSV for Trello",
+  "name": "CSV Export for Trello",
   "description": "CSV export for trello board",
   "version": "0.3",
   "browser_action": {
