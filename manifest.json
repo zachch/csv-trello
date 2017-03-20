@@ -3,7 +3,7 @@
 
   "name": "CSV for Trello",
   "description": "CSV export for trello board",
-  "version": "0.2",
+  "version": "0.3",
   "browser_action": {
     "default_title": "CSV for trello export"
   },
