@@ -3,7 +3,7 @@
 
   "name": "CSV Export for Trello",
   "description": "CSV export for trello board",
-  "version": "0.4",
+  "version": "0.4.1",
   "browser_action": {
     "default_title": "CSV for trello export"
   },
@@ -11,6 +11,12 @@
   "background": {
     "scripts": ["background.js"],
     "persistent": false
+  },
+
+  "icons": {
+    "16": "images/csv-trello-16.png",
+    "48": "images/csv-trello-48.png",
+    "128": "images/csv-trello-128.png"
   },
 
   "permissions": [
