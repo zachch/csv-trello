@@ -8,7 +8,7 @@
   var trelloData = trelloHelper.data();
   var csvHeaders = trelloHelper.getCSVHeaders(trelloData.cardData[0]);
   var csvContent = utils.getCSVContent(cardArray, csvHeaders);
-  utils.downloadCSVFile(csvContent, 'trello');
+  utils.downloadCSVFile(csvContent, trelloData.boardData.name);
 
 
 })();
