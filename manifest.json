@@ -5,13 +5,10 @@
   "short_name": "CSV Trello",
   "description": "CSV export for trello board",
   "version": "0.11.2",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "browser_action": {
-    "default_title": "CSV for trello export"
-  },
-
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "default_title": "CSV for trello export",
+    "default_popup": "background.html"
   },
 
   "icons": {
