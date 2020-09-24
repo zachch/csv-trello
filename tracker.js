@@ -1,6 +1,6 @@
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-178666574-1']);
-_gaq.push(['_trackEvent', 'BrowserAction Button', 'Click']);
+_gaq.push(['_trackEvent', 'BrowserAction Button', 'Click', chrome.runtime.getManifest().version]);
 
 (function() {
   var ga = document.createElement('script');
