@@ -8,9 +8,6 @@ if command -v deno >/dev/null; then
 fi
 
 exec npx standard \
-  --global trelloHelper \
-  --global utils \
   --global XMLHttpRequest \
   --global chrome \
-  --global _gaq \
   --fix

@@ -1,7 +1,6 @@
-// eslint-disable-next-line no-var, no-use-before-define
-var _gaq = _gaq || []
-_gaq.push(['_setAccount', 'UA-178666574-1'])
-_gaq.push(['_trackEvent', 'BrowserAction Button', 'Click', chrome.runtime.getManifest().version]);
+globalThis._gaq = globalThis._gaq || []
+globalThis._gaq.push(['_setAccount', 'UA-178666574-1'])
+globalThis._gaq.push(['_trackEvent', 'BrowserAction Button', 'Click', chrome.runtime.getManifest().version]);
 
 (function () {
   const ga = document.createElement('script')
