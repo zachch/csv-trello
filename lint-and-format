@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+IFS=$'\t\n'
+
+if command -v deno >/dev/null; then
+  deno fmt ./*.md
+fi
+
+exec npx standard \
+  --global trelloHelper \
+  --global utils \
+  --global XMLHttpRequest \
+  --global chrome \
+  --global _gaq \
+  --fix
