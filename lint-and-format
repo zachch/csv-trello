@@ -8,6 +8,5 @@ if command -v deno >/dev/null; then
 fi
 
 exec npx standard \
-  --global XMLHttpRequest \
   --global chrome \
   --fix
