@@ -14,6 +14,9 @@ It's available at the
    address bar)
 3. A CSV file will be downloaded automatically
 
+If importing into JIRA, when it asks for _Date format_ give it
+`yyyy-MM-dd'T'HH:mm:ss.SSSZ`.
+
 ## Contributing
 
 We recommend all users to install the extension from the
