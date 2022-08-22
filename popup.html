@@ -19,9 +19,29 @@
       align-items: center;
     }
 
+    /* each form field on its own line */
+    label {
+      display: block;
+    }
+
     /* improve spacing */
     h1 {
       margin-bottom: 0.5em;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    fieldset {
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(0 0 0 / 20%);
+      padding-bottom: 1em;
+    }
+
+    legend {
+      margin-bottom: -1em;
     }
 
     button {
@@ -30,6 +50,7 @@
     }
 
     button[type='submit'] {
+      float: right;
       font-weight: bold;
     }
   </style>
@@ -38,6 +59,8 @@
 <main>
   <h1>CSV Export for Trello</h1>
   <form action="#">
+    <h2>Configure output fields</h2>
+    <button type='button' id='toggle-all'>Toggle all</button>
     <button type='submit' id='export-button'>Export CSV</button>
   </form>
 </main>
