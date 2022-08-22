@@ -1,4 +1,47 @@
-<html lang="en">
-<script src="tracker.js"></script>
-<script src="popup.js"></script>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>CSV Export for Trello</title>
+  <style>
+    /* size of the popup */
+    body {
+      width: 31em;
+      padding-bottom: 3em;
+    }
+
+    /* center main element and headings */
+    main, h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* improve spacing */
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    button {
+      margin-top: 18px;
+      font-size: 1.2em;
+    }
+
+    button[type='submit'] {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>CSV Export for Trello</h1>
+  <form action="#">
+    <button type='submit' id='export-button'>Export CSV</button>
+  </form>
+</main>
+<script src='tracker.js'></script>
+<script src='popup.js'></script>
+</body>
 </html>

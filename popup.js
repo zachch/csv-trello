@@ -49,6 +49,10 @@ await executeModule(\`
     globalThis._gaq.push(['_trackEvent', 'BrowserAction Popup', 'Closed'])
   }
 
-  await importModuleAndExecute('await downloadTrelloBoardCsv()')
-  window.close()
+  document.getElementById('export-button').addEventListener('click', async function () {
+    await importModuleAndExecute('await downloadTrelloBoardCsv()')
+  })
+
+  // pre-load module, execute nothing
+  await importModuleAndExecute('')
 })()
