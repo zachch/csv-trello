@@ -126,6 +126,7 @@ await executeModule(\`
   getAllCheckboxes().forEach(checkbox => checkbox.addEventListener('change', debouncedSaveConfig))
 
   onElementClickedClickCheckboxes('toggle-all', 'input[type="checkbox"]')
+  onElementClickedClickCheckboxes('desc', 'input[type="checkbox"][id^="desc-"]')
 
   document.getElementById('export-button').addEventListener('click', async function () {
     const config = getConfig()

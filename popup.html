@@ -60,6 +60,13 @@
   <h1>CSV Export for Trello</h1>
   <form action="#">
     <h2>Configure output fields</h2>
+    <fieldset name="desc">
+      <legend id="desc"><h3>desc</h3></legend>
+      <label>
+        <input type='checkbox' id='desc-jira-compatible'/>
+        Convert to JIRA compatible markdown
+      </label>
+    </fieldset>
     <button type='button' id='toggle-all'>Toggle all</button>
     <button type='submit' id='export-button'>Export CSV</button>
   </form>
