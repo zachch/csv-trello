@@ -50,3 +50,15 @@ request on Github.
 We encourage you to make each commit as small and clear as possible. For
 example, first a commit that makes the necessary refactorings, followed by a
 commit that implements the feature as concisely as possible.
+
+## Final packaging and upload to Chrome Web Store
+
+This command packages the extension into a zip file:
+
+```bash
+npm run build
+```
+
+The file is named `csv-trello-${VERSION}.zip`, where `${VERSION}` is the version
+number from the `manifest.json` file. It should be correct for manual upload to
+the Chrome Web Store.
