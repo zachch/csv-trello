@@ -8,8 +8,15 @@
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "browser_action": {
     "default_title": "CSV for trello export",
-    "default_popup": "background.html"
+    "default_popup": "popup.html"
   },
+
+  "web_accessible_resources": [
+    "popup.html",
+    "popup.js",
+    "vendor/*.js",
+    "lib/*.js"
+  ],
 
   "icons": {
     "16": "images/csv-trello-16.png",

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>CSV Export for Trello</title>
+  <style>
+    /* size of the popup */
+    body {
+      width: 31em;
+      padding-bottom: 3em;
+    }
+
+    /* center main element and headings */
+    main, h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* each form field on its own line */
+    label {
+      display: block;
+    }
+
+    /* improve spacing */
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    fieldset {
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(0 0 0 / 20%);
+      padding-bottom: 1em;
+    }
+
+    legend {
+      margin-bottom: -1em;
+    }
+
+    button {
+      margin-top: 18px;
+      font-size: 1.2em;
+    }
+
+    button[type='submit'] {
+      float: right;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>CSV Export for Trello</h1>
+  <form action="#">
+    <h2>Configure output fields</h2>
+    <fieldset name="desc">
+      <legend id="desc"><h3>desc</h3></legend>
+      <label>
+        <input type='checkbox' id='desc-jira-compatible'/>
+        Convert to JIRA compatible markdown
+      </label>
+      <label>
+        <input type='checkbox' id='desc-append-checklists'/>
+        Append Checklists
+      </label>
+      <label>
+        <input type='checkbox' id='desc-append-attachments'/>
+        Append Attachments as links
+      </label>
+      <label>
+        <input type='checkbox' id='desc-append-card-link'/>
+        Append link back to Trello card
+      </label>
+    </fieldset>
+    <fieldset name="labels">
+      <legend id="labels"><h3>labels</h3></legend>
+      <label>
+        <input type='checkbox' id='labels-jira-compatible'/>
+        Convert to JIRA compatible
+      </label>
+      <label>
+        <input type='checkbox' id='labels-append-list-name'/>
+        Include name of card's list (Trello column)
+      </label>
+    </fieldset>
+    <button type='button' id='toggle-all'>Toggle all</button>
+    <button type='submit' id='export-button'>Export CSV</button>
+  </form>
+</main>
+<script src='tracker.js'></script>
+<script src='popup.js'></script>
+</body>
+</html>

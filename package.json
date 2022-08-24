@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "run-s lint",
+    "build": "run-s lint vendor package",
+    "vendor": "run-p vendor:*",
+    "vendor:markdown": "esbuild node_modules/@kenchan0130/markdown-to-atlassian-wiki-markup/dist/index.js --bundle --format=esm | sed -E 's|marked_1.default\\(|marked_1.marked(|g' | sed -E 's|return `h\\$\\{level}\\.|return `\\nh\\${level}.|g' > vendor/markdown.js",
+    "package": "run-s package:clean package:dist package:zip",
+    "package:clean": "VERSION=\"$(node -p \"require('./manifest.json').version\")\" && mkdir -p dist && rm -rf dist csv-trello-${VERSION}.zip",
+    "package:dist": "mkdir -p dist && cp -r manifest.json popup.html popup.js tracker.js images lib vendor *.md LICENSE dist/",
+    "package:zip": "VERSION=\"$(node -p \"require('./manifest.json').version\")\" && cd dist && zip -r ../csv-trello-${VERSION}.zip *",
+    "lint": "run-s lint:md lint:js",
+    "lint:md": "command -v deno >/dev/null && deno fmt ./*.md",
+    "lint:js": "standard --global=chrome --fix *.js lib"
+  },
+  "dependencies": {
+    "@kenchan0130/markdown-to-atlassian-wiki-markup": "^5.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.5",
+    "npm-run-all": "^4.1.5",
+    "standard": "^17.0.0"
+  }
+}
